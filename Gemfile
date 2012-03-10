@@ -20,9 +20,10 @@ gem "heroku"
 gem "pg"
 gem "haml"
 gem "haml-rails"
+gem "twilio-ruby"
+gem "delayed_job"
 group :development, :test do
   gem 'rspec-rails'
-  gem 'jasmine'
   gem "headless"
 
   

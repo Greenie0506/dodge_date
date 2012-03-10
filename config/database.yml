@@ -1,10 +1,10 @@
   development:
     adapter: postgresql
     database: dodge_date_dev
-    username: postgres
-    password: 
+    username: pivotal
+    password:
     host: localhost
-    
+
 
   # Warning: The database defined as 'test' will be erased and
   # re-generated from your development database when you run 'rake'.
@@ -12,16 +12,16 @@
   test:
     adapter: postgresql
     database: dodge_date_test
-    username: postgres
-    password: 
+    username: pivotal
+    password:
     host: localhost
-    
+
 
   production:
     adapter: postgresql
     database: dodge_date_production
-    username: postgres
-    password: 
+    username: pivotal
+    password:
     host: localhost
-    
+
 
