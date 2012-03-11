@@ -1,8 +1,8 @@
 %h1 Dodge Date
 
-
 = form_tag('/call_me') do
+  %p The format of your phone number should look like: 9995554444
+  = label_tag 'number', 'What number would you like to call?'
   = text_field_tag :number
-  %div
-    = submit_tag "Set call"
+  = submit_tag "Set call"
 
