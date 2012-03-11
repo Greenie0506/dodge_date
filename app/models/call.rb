@@ -18,10 +18,16 @@ class Call
 
     @client = Twilio::REST::Client.new account_sid, auth_token
 
+    url = if Rails.env == :development
+            'http://localhost:3000/voice.xml'
+          else
+            'http://dodgedate.com/voice.xml'
+          end
+
     @call = @client.account.calls.create(
       :from => '+18607864737',
       :to => "+#{number}",
-      :url => 'http://demo.twilio.com/welcome/call'
+      :url =>  url
     )
   end
 end
