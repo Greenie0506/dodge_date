@@ -1,9 +1,15 @@
 class Call
   attr_accessor :number
 
-
   def initialize(number)
-    @number = number
+    number.gsub!("\D", "")
+    number = ("1" + number)
+
+    if number.size == 11
+      @number = number
+    else
+      raise Exception.new("Not a valid number")
+    end
   end
 
   def make_call
