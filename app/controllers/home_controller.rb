@@ -4,6 +4,8 @@ class HomeController < ApplicationController
 
   def call_me
     @call = Call.new(params[:number])
-    render text: ""
+    @call.make_call
+
+    render text: "Your call has been placed"
   end
 end
