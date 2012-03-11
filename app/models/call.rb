@@ -3,8 +3,9 @@ class Call
 
   def initialize(number)
     @number = number
-    account_sid = 'AC9e1e2ba110ed47fe93a1ed39f2cefe36'
-    auth_token = 'ad0527da74095782fd5111bc6e63ecb2'
+
+    account_sid = ENV['TWILIO_SID']
+    auth_token = ENV['TWILIO_TOKEN']
 
     @client = Twilio::REST::Client.new account_sid, auth_token
 
