@@ -18,16 +18,10 @@ class Call
 
     @client = Twilio::REST::Client.new account_sid, auth_token
 
-    url = if Rails.env == :development
-            'http://localhost:3000/voice'
-          else
-            'http://dodgedate.com/voice'
-          end
-
     @call = @client.account.calls.create(
       :from => '+18607864737',
       :to => "+#{number}",
-      :url =>  url
+      :url =>  'http://dodgedate.com/voice.txt'
     )
   end
 end
