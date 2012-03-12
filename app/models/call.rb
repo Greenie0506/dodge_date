@@ -21,7 +21,7 @@ class Call
     @call = @client.account.calls.create(
       :from => '+18607864737',
       :to => "+#{number}",
-      :url =>  'http://dodgedate.com/voice.txt'
+      :url =>  'dodgedate.com/voice.txt'
     )
   end
 end
