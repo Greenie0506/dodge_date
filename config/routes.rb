@@ -1,6 +1,6 @@
 DodgeDate::Application.routes.draw do
   match "/call_me", :to => "home#call_me"
-  match '/voice', action: "home#voice"
+  match "/voice", :to => "home#voice"
 
   # The priority is based upon order of creation:
   # first created -> highest priority.
