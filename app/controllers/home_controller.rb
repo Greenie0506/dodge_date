@@ -8,4 +8,8 @@ class HomeController < ApplicationController
 
     render text: "Your call has been placed"
   end
+
+  def voice
+    render :file => 'public/voice.txt', :content_type => 'text/xml'
+  end
 end
