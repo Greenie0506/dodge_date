@@ -1,5 +1,13 @@
-class Call
+class Call < ActiveRecord::Base
   attr_accessor :number
+
+  CALL_TIMES = {
+    "Now" => Time.now,
+    "Half hour" => Time.now + 30,
+    "Hour" => Time.now + 60,
+    "Hour and a half" => Time.now + 90,
+    "Two hours" => Time.now + 120
+  }
 
   def initialize(number)
     number.gsub!("\D", "")
@@ -25,3 +33,4 @@ class Call
     )
   end
 end
+
