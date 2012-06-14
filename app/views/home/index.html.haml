@@ -11,6 +11,4 @@
 = simple_form_for :call do |f|
   = f.text_field :number, label: "What is your telephone number"
   = f.input_field :time, collection: Call::CALL_TIMES, as: :select
-  = f.submit "Set call"
-
-
+  = f.button :submit
