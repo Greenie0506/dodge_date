@@ -21,7 +21,9 @@ gem "pg"
 gem "haml"
 gem "haml-rails"
 gem "twilio-ruby"
-gem "delayed_job"
+gem 'delayed_job_active_record'
+gem 'simple_form'
+
 group :development, :test do
   gem 'rspec-rails'
   gem "headless"

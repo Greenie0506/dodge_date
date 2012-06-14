@@ -3,8 +3,8 @@ class HomeController < ApplicationController
   end
 
   def call_me
-    @call = Call.new(params[:number])
-    @call.make_call
+    @call = Call.create!(number: params[:number])
+    @call.delay(run_at: Call::CALL_TIMES[params[:time]]).make_call
 
     render text: "Your call has been placed"
   end

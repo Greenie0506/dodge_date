@@ -1,9 +1,9 @@
 require 'spec_helper'
 
 describe Call do
-  describe ".initialize" do
+  describe "#new_call" do
     it "should save the number" do
-      call = Call.new("18605554444")
+      call = Call.create!(number: "18605554444")
       call.number.should == "18605554444"
     end
   end
@@ -18,7 +18,7 @@ describe Call do
     end
 
     it "should make a phone call" do
-      call_object = Call.new("18005554444")
+      call_object = Call.create(number:"18005554444")
       call_object.make_call.should == call
     end
   end

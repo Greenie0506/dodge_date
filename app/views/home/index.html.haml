@@ -1,10 +1,10 @@
 %h1 Dodge Date
 
-= form_tag('/call_me') do
+= form_tag('/call_me', :method => 'post') do
   %p The format of your phone number should be: 9995554444
   = label_tag 'number', 'What number would you like to call?'
   = text_field_tag :number
   = label_tag 'time_until_call', 'When would you like to be called:'
-  = select('call', 'make_call',Call::CALL_TIMES, { :allow_blank => false })
+  = select_tag('time', Call::CALL_TIMES, { :allow_blank => false })
   = submit_tag "Set call"
 

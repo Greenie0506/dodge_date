@@ -46,8 +46,11 @@ GEM
       coffee-script-source
       execjs
     coffee-script-source (1.2.0)
-    delayed_job (3.0.1)
+    delayed_job (3.0.3)
       activesupport (~> 3.0)
+    delayed_job_active_record (0.3.2)
+      activerecord (> 2.1.0)
+      delayed_job (~> 3.0.0)
     diff-lcs (1.1.3)
     erubis (2.7.0)
     execjs (1.3.0)
@@ -140,6 +143,9 @@ GEM
       railties (~> 3.2.0)
       sass (>= 3.1.10)
       tilt (~> 1.3)
+    simple_form (2.0.2)
+      actionpack (~> 3.0)
+      activemodel (~> 3.0)
     sprockets (2.1.2)
       hike (~> 1.2)
       rack (~> 1.0)
@@ -166,7 +172,7 @@ DEPENDENCIES
   auto_tagger (= 0.2.3)
   bundler
   coffee-rails (~> 3.2.1)
-  delayed_job
+  delayed_job_active_record
   haml
   haml-rails
   headless
@@ -177,5 +183,6 @@ DEPENDENCIES
   rails (= 3.2.2)
   rspec-rails
   sass-rails (~> 3.2.3)
+  simple_form
   twilio-ruby
   uglifier (>= 1.0.3)
