@@ -1,4 +1,6 @@
+%h1 Dodge Date
+%h3 Dodge bad dates with a simple phone call.
 = simple_form_for :call, :url => url_for(:action => 'create', :controller => 'call') do |f|
-  = f.text_field :number, label: "What is your telephone number"
+  = f.input :number, label: "What number would you like to call? Example: ( 12223333 )"
   = f.input :time, collection: Call::CALL_TIMES, as: :select, label: "At what time would you like this call?"
   = f.button :submit, "Set call"
