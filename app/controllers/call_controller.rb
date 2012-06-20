@@ -1,11 +1,18 @@
 class CallController < ApplicationController
   def index
+    render :new
   end
 
   def create
-    @call = Call.create!(number: params[:number])
-    @call.delay(run_at: Call::CALL_TIMES[params[:time]]).make_call
+    if @call.nil?
+      @call = Call.create!(number: params[:call][:number])
+      @call.delay(run_at: params[:call][:time]).make_call
+      render :show
+    else
+      logger.debug "Your call is nill"
+    end
+  end
 
-    render text: "Your call has been placed"
+  def show
   end
 end

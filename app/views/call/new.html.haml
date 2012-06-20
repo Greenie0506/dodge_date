@@ -1,0 +1,4 @@
+= simple_form_for :call, :url => url_for(:action => 'create', :controller => 'call') do |f|
+  = f.text_field :number, label: "What is your telephone number"
+  = f.input :time, collection: Call::CALL_TIMES, as: :select, label: "At what time would you like this call?"
+  = f.button :submit, "Set call"

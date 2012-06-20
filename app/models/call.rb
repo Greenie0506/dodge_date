@@ -1,11 +1,11 @@
 class Call < ActiveRecord::Base
 
   CALL_TIMES = {
-    "Now" => Time.now,
-    "Half hour" => Time.now + 30.minutes,
-    "Hour" => Time.now + 60.minutes,
-    "Hour and a half" => Time.now + 90.minutes,
-    "Two hours" => Time.now + 120.minutes
+    "Now" => (Time.now).to_datetime,
+    "Half hour" => (Time.now + 30.minutes).to_datetime,
+    "Hour" => (Time.now + 60.minutes).to_datetime,
+    "Hour and a half" => (Time.now + 90.minutes).to_datetime,
+    "Two hours" => (Time.now + 120.minutes).to_datetime
   }
 
   def new_call(number)
