@@ -25,7 +25,6 @@ class Call < ActiveRecord::Base
   end
 
   private
-
   def new_call
     number.gsub!("\D", "")
     self.number = "1#{number}" unless number.size == 11

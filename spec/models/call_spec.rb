@@ -15,7 +15,7 @@ describe Call do
     end
 
     it "should make a phone call" do
-      call_object = Call.create(number:"18005554444")
+      call_object = Call.create!(number:"18005554444")
       call_object.make_call.should == call
     end
   end
