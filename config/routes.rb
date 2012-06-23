@@ -1,6 +1,6 @@
 DodgeDate::Application.routes.draw do
   root :to => 'call#index'
-  match "/voice", :to => "home#voice"
+  match "/voice", :to => "call#voice"
   resources :call
 
   # The priority is based upon order of creation:
