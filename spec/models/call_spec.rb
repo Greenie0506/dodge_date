@@ -1,11 +1,8 @@
 require 'spec_helper'
 
 describe Call do
-  describe "#new_call" do
-    it "should save the number" do
-      call = Call.create!(number: "18605554444")
-      call.number.should == "18605554444"
-    end
+  describe "validations" do
+    it { should validate_length_of(:number, maximum: 11, minimum: 11) }
   end
 
   describe "#make_call" do

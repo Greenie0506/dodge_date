@@ -8,16 +8,8 @@ class Call < ActiveRecord::Base
     "Two hours" => 120.minutes.from_now
   }
 
-  def new_call(number)
-    number.gsub!("\D", "")
-    number = ("1" + number)
-
-    if number.size == 11
-      @number = number
-    else
-      raise Exception.new("Not a valid number")
-    end
-  end
+  before_validation :new_call
+  validates_length_of :number, maximum: 11, minimum: 11
 
   def make_call
     account_sid = ENV['TWILIO_SID']
@@ -30,6 +22,13 @@ class Call < ActiveRecord::Base
       :to => "+#{number}",
       :url =>  'http://www.dodgedate.com/voice'
     )
+  end
+
+  private
+
+  def new_call
+    number.gsub!("\D", "")
+    self.number = "1#{number}" unless number.size == 11
   end
 end
 
