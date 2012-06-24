@@ -19,6 +19,7 @@ gem "haml-rails"
 gem "twilio-ruby"
 gem 'delayed_job_active_record'
 gem 'simple_form'
+gem 'bootstrap-sass'
 
 group :development, :test do
   gem 'rspec-rails'

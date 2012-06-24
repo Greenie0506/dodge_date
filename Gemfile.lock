@@ -32,6 +32,7 @@ GEM
     arel (3.0.2)
     auto_tagger (0.2.3)
       capistrano (>= 2.5.3)
+    bootstrap-sass (2.0.3.1)
     builder (3.0.0)
     capistrano (2.11.2)
       highline
@@ -180,6 +181,7 @@ PLATFORMS
 
 DEPENDENCIES
   auto_tagger (= 0.2.3)
+  bootstrap-sass
   bundler
   coffee-rails (~> 3.2.1)
   delayed_job_active_record
